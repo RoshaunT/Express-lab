@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+</head>
+<body>
+    <h1>Students:</h1>
+    <ul>
+        <% students.forEach(function(s) { %>
+            <li>
+                ID: 
+                <%= s.id %>
+                -
+                <%= s.fullName %> 
+                :
+                <a href="/students/<%= s.id %>">
+                    Click for Details for Student <%= s.id %>
+                </a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
